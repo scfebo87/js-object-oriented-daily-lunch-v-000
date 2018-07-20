@@ -60,8 +60,8 @@ class Meal {
       return delivery.mealId == this.id});
   }
   customers() { 
-    return this.deliveries().map(delivery => {
-      return delivery.customer()});
+    return this.deliveries().map(function (delivery) {
+      return delivery.customer();});
   }
   static byPrice() { 
     return store.meals.sort(function(a, b) {
