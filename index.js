@@ -5,7 +5,7 @@ let mealId = 0;
 let deliveryId = 0;
 
 class Neighborhood { 
-  constructor(name) {
+  constructor(name) { 
     this.id = ++neighborhoodId;
     this.name = name; 
     store.neighborhoods.push(this);
@@ -81,7 +81,7 @@ class Delivery {
   }
   customer() { 
     return store.customers.find(customer => {
-      return this.customerId  === customer.id}); 
+      return customer.id  === this.customerId}); 
   }
   neighborhood() { 
     return store.neighborhoods.find(neighborhood => { return neighborhood.id === this.neighborhoodId});
