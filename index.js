@@ -59,7 +59,7 @@ class Meal {
     return store.deliveries.filter(delivery => {
       return delivery.mealId === this.id});
   }
-  static customers() { 
+customers() { 
     return this.deliveries().map(delivery => {
       delivery.customer()});
   }
