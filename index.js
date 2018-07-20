@@ -40,8 +40,8 @@ class Customer {
       return delivery.meal()});
   }
   totalSpent() { 
-    return this.meals().reduce((total, meal) => {
-      return total + meal.price;}, 0);
+    let total = 0; 
+    
   }
 }
 
