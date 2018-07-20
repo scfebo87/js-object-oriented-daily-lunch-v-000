@@ -80,7 +80,8 @@ class Delivery {
       return this.mealId === meal.id});
   }
   customer() { 
-    return store.customers.find(customer => customer.id  === this.customerId); 
+    return store.customers.find(customer => {
+      return customer.id  === this.customerId}); 
   }
   neighborhood() { 
     return store.neighborhoods.find(neighborhood => { return neighborhood.id === this.neighborhoodId});
