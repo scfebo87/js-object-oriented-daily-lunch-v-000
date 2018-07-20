@@ -79,7 +79,7 @@ class Delivery {
     store.deliveries.push(this);
   } 
   meal() { 
-    return store.meals.filter(meal =>{
+    return store.meals.find_by(meal =>{
       return meal.id === this.mealId});
   }
   customer() { 
