@@ -82,6 +82,8 @@ class Delivery {
   customer() { 
     return store.customers.find(customer => {
       return customer.id  === this.customerId}); 
+      setCustomer(customer){
+   this.customerId = customer.id;
   }
   neighborhood() { 
     return store.neighborhoods.find(neighborhood => { return neighborhood.id === this.neighborhoodId});
