@@ -81,6 +81,9 @@ class Delivery {
   setCustomer(customer) {
    this.customerId = customer.id;
   }
+  setMeal(meal) {
+   this.mealId = meal.id;
+  }
   meal() { 
     return store.meals.find(meal => {
       return this.mealId === meal.id});
