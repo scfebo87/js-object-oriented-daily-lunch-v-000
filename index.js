@@ -89,7 +89,7 @@ class Delivery {
   }
   meal() { 
     return store.meals.find(meal => {
-      return this.mealId === meal.id});
+      return meal.id === this.mealId});
   }
   customer() { 
     return store.customers.find(customer => {
