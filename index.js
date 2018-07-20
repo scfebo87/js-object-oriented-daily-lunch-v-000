@@ -75,6 +75,9 @@ class Delivery {
     this.customerId = customerId;
     store.deliveries.push(this);
   }
+  setCustomer(customer){
+   this.customerId = customer.id;
+  }
   meal() { 
     return store.meals.find(meal => {
       return this.mealId === meal.id});
@@ -82,8 +85,6 @@ class Delivery {
   customer() { 
     return store.customers.find(customer => {
       return customer.id  === this.customerId}); 
-      setCustomer(customer){
-   this.customerId = customer.id;
   }
   neighborhood() { 
     return store.neighborhoods.find(neighborhood => { return neighborhood.id === this.neighborhoodId});
