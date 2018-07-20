@@ -42,8 +42,9 @@ class Customer {
   totalSpent() { 
     let total = 0; 
     this.meals().forEach(function(meal) {
-      return 
-    })
+      total += meal.price;
+    });
+    return total;
   }
 }
 
