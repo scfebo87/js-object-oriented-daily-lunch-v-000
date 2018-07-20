@@ -77,16 +77,7 @@ class Delivery {
     this.neighborhoodId = neighborhoodId;
     this.customerId = customerId;
     store.deliveries.push(this);
-  }
-  setNeighborhood(neighborhood) {
-    this.neighborhoodId = neighborhood.id;
-  }
-  setCustomer(customer) {
-   this.customerId = customer.id;
-  }
-  setMeal(meal) {
-   this.mealId = meal.id;
-  }
+  } 
   meal() { 
     return store.meals.filter(meal =>{
       return meal.id === this.mealId});
