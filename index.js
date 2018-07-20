@@ -5,9 +5,9 @@ let mealId = 0;
 let deliveryId = 0;
 
 class Neighborhood { 
-  constructor(name) { 
-    this.name = name; 
+  constructor(name) {
     this.id = ++neighborhoodId;
+    this.name = name; 
     store.neighborhoods.push(this);
   }
   deliveries() { 
@@ -19,9 +19,9 @@ class Neighborhood {
       return customer.neighborhoodId === this.id});
   }
   meals() { 
-    let allMeals = this.deliveries().map(delivery => { 
+    let orderedMeals = this.deliveries().map(delivery => { 
       return delivery.meal()});
-      return [...new Set(allMeals)];
+      return [...new Set(orderedMeals)];
   }
 }
 class Customer { 
