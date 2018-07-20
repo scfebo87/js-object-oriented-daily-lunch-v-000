@@ -19,9 +19,9 @@ class Neighborhood {
       return customer.neighborhoodId === this.id});
   }
   meals() { 
-    let orderedMeals = this.deliveries().map(delivery => { 
+    let result = this.deliveries().map(function(delivery) { 
       return delivery.meal()});
-      return [...new Set(orderedMeals)];
+      return [...new Set(result)];
   }
 }
 class Customer { 
